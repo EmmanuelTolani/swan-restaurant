@@ -1,0 +1,15 @@
+#top-img{
+    padding: 30px 30px 100px ;
+  .container{
+    margin: 0 auto;
+    max-width: 1380px !important;
+  }
+  .img-container{
+    max-width: 1500px;
+    overflow: hidden;
+    img{
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}

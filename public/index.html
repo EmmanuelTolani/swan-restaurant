@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="/css/main.css">
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link href="//db.onlinewebfonts.com/c/547fcb026eb30833b9696544bec8e2ac?family=Baskerville+Display+PT+Web" rel="stylesheet" type="text/css"/>
+    <link href="//db.onlinewebfonts.com/c/789f9065baf48309d73fd0ff02fe4aec?family=Big+Caslon+Black" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <section id="notify-bar">
+      <span><a href="#">Order delivery from UberEats</a> or <a href="#">Order pickup from our online store</a></span>
+    </section>
+    <header>
+      <div class="container">
+        <div class="header-menu">
+          <div class="header-address">
+            <h2>French Diner</h2>
+            <span>8962 Jasper Ave Edmonton</span>
+          </div>
+          <div class="header-logo">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMUAAAD/CAMAAAB2B+IJAAAAkFBMVEX///8AAAD8/Px8fHzHx8f29vbx8fH5+fnm5ub09PTv7+/p6enZ2dnd3d3i4uLW1tbCwsKIiIi7u7uurq6ioqK2trbOzs5ycnJjY2ORkZGBgYGdnZ1WVlZdXV1KSkpQUFAwMDBDQ0M0NDQpKSkyMjIaGhpzc3OVlZUhISETExM9PT1FRUViYmIVFRWfn58dHR32M59aAAAOtklEQVR4nO2d6ZqquhJAUwFEQQaZxVnbudv9/m93E0CIElQQ2tPfzfpxDo0MGSqVSlWRjZBAIBAIBAKBQCAQCAQCgUAgEAgEAsH/GRhhw3blfnL4ZzFjSIm1TxelKRjJtPyGZjojABepny5QM3yAaJAeYg+kzxamKX2AU/GXC9bnivIGEYCR/4HR7PTg2v8spCsiVjNpEHyuMI1xAeQb/Rp/fawszfHua6EtP1WUNwgALmwtMP6DMx9Gazio7JyN/14lCGTOW5ufLsT72GTq3n+mA9p7K0Z9MmVs/U9Ygqre5tOsE8Bq2OYTP4N/BAj/rEWbQdTrHqhF++fRZwDT3qdL8T42ESv704WoT0krkUWf9/fmvdvxTIrv/sd6I2/QyqbFyID+/UkH4D+lqgaW43oXL6iUD4zCU1krRTDrtFgvQ8otS7CdSuOLN1nBuFcxLytghqWTJl37PR0ZnAvatoZVD6ZOrjO1MYz4UhUAKrU7RlMYNXut4rRpUNgQ3Yo7Hm+47eR9oynv9s31Ps7DaXtY0r8faj/i/CJMTpNOhNaqocxW94Y2RuMVr0hxjBblswbAQ5+Uc4LDOIa1nXlL+tJ6hGglRgvgPK4RAd+MmPKkJPJQdD0uZK53bVJnf3N1qrrkOTG46F8Au+SEB2TOp2Nsj9QjOO+VPi0KaXSF/wNZXZeY+r04rYDvFH2lAqTm7QaSwkfpYFfh7Hoh9YOmGuGHzI/k7PRLR9ShtRkjOtv8tDBlquddhTSjIZRNpKkvJx2nHsJzUUkLUmeOBmf6vxFMkge4i/BrO3P8bNSQq/pU+iS6Whyj3YJalOgf6ZH3qoGR/sgoDeNyLRwpERMpRvYllykvc7NZQMQNk55JBWub+qk2WaeeaG1coH04AsuHVAScpG5vVcR46BDrQUnWdm6iaDEZB7M+CjKVE2aj20k07hhISxPkQ1I2F1Kttj+SXyMwad03MCQymJb8DGtjkshaQ3R4vFob7e/P+KlTVgN1ShasSWERViCVJHShPTsEKa1FNm5XtKXIODq6MP43V9LbN8froMY9OnAmzfti8KQSpDPuz8SQvE6FKSmam3lr3cSsTX4NiOaR90DHbbxG6aXJQ2zQbVLYVAiJFOW6ASNt76hvSNTJT57ywK5eMe5wcpGx8OVloFnubDvCKMh6Cm8hrRuRlz6ah2hCBcsHLT25JnKpSXTgBFdt0ffaMx8v0yR+oj1w3HtsbGIYTck4HEykiTNQpVVoZ5UL4SrVEYzDE8IurKxR3tpENf2ApKJiBLdoOxFVksxUfjYWufQTacAafbG95zdgBLlJS0TrhJPpDZjhiocG98YMXXYnsTRuuEaR0kmYrNUeGAFAQ0bG1b7gNSKpxDSTSUxqSo+wPhlbNxdXtX7fW8CVRloq04faNFo/EKmQamI1mcU4YKQuHjZCFUmtNe9ECj/1Ak3FSJmXNMkrj6HVn3sSXNAjQXUviZFSZewFS1KMRhYE9qekAJGdP9hrUgt07cjH2sJK7bdNub3J64eLJoJA62zQQPPSU5mTDjRoDAvOR1qJzePLtLT4OpwGpSfMaG+a9TXOwD0lgebbs26DviDLM6tHixE9vkzJIo/aEiasOaL4tCQ/DRSLTNQBnJ1S3acNYpwu+KmmfxKsHiyvR+TaeEgnMtwPXCrTcKivVYwRFQCJYzIYD/R9FVZ2T/RswawXEkcXOwwzaqi+KE3ZUjV5wtzHvPui+ktX7SpI6rFk793SZ8eNuV+sNqfzYhaO7dpZE313DbDdl7xZFEyatXYGA97Or3c7d+NCD25byqwc/S8PaqxZsicdaPcFFfdhtASlppZQvw5FS0KPUfc26fL1zZrCPtd7NvsaM3D34flfJoHRpEqnk/d/g1/38St2DvMyJ5lm+SMy7voo3LHXemUf2l0RKOpg0KPolu9d9uPxSJqt8wF0mMWe/XBW6i2gvKp8wowsp4vmH+RvO8U+rZ1Oeqe4WKocN4OhP44OUMnx/B1ffOu5Ca6OG0ydIeMuxnIMUysYmrpSWM03rpUT189iuNImKel6vphGYc5uNPZcR7bMvl54rh8XB0+IDVNTPWEigcktdDAEdLoor7tXTMPgkhuE3OesSAW2oRu0EEWyjzDdHNSaI3ua5wR5ACOu62B1KY6DsllgkeF63D9cMbyMvoDQIIuYZ4Pvju+rz8OFRZU9vmGGwr5koBAVwJeyBuiHsZYWplbI2QA7kdPg8GBNwXqoFnfDTv8CnsfwXVa1UpMcOih6/uqRdlYZF5Vyl0xnEhu4i7CRXScYhZXtenyCxcMZJmCy6Xy4UTEWXRLVLeErsO98AdUb+VzfckGx5sLofDMDylB/cnoFupZs+5nRKj/s3/g/A5po0EVIGOvttw6McimaMItIIo2dBYQXHOf8e1jMgP7HNBHevBKBbIIybV/thYXSs9gxdwKti0rQKEmm/lukz8wWmbs4YQodpdhJMOUunN5iVIiowlRI6mKuo4y7eLDGeAEn1xgMDb5NuhkTZgdp0RgtivCwArk9ZUFXmeQn2LXfPF5uCdDQW94VUM5gaQcXgtPq+WX1GDJadpg4rBLiLFLUOiZ9cNsypTNGovqTp3sEraUHsND0mcQZ1vLw7gGzsAgh98seusl+sjdJb/da/QYFD4oVF3Vg5y0UF6LVKuO045s4/KtRrp42ilaYZ9Rp12FW4KCVNJAMjE5LxmsRba9H6LDpMrERn+6XxG+97XxgQs721YCi+tbosCcsWJce3muY9k2KuToyayelmMDNTj9jC2FcqgRZT9Z2dqbg+XHAdOXslP+xKGeCtIhEjDbNH8VjPzfeTBidOMlwTyEFnt+sUsbXSAJVVW8kmbxAtA4BltSlSy1mTPNcXTR8EqSrYH6zdBgWpqwKh7cL+hhYugOapAhUomkUY/Io2FAJTitR/Ik3i7xKcVf2eM4mG8qLpOn2yX+D+pYVMWPZUBRVSvmkbXSf7Htde/kgTSTYJAkL7pOAKY8ZtVcLebKYWejU1fouZ3e10HyA7XcWaQorEh0qIfPbnT/rX9H8btcfCw/XP1cNuC9sf6Weh40S3fl5J0UIRnmSI/suRsTEhueF2Vw3eq+iHTHu2XnHzPUTJr91+LEODbXHhXo3GFfXpq5AlXTQvIhFWrDs9Ds2m8yn+fOjQqMHNwG5p1B15N+esBl1tej0c2dSUEaWjVylEJVZU0NR7cyGojBm8nMD2HFvao2YEf/zMj80ai2aMLqUUrek4/VHjL7qdWwdkjDQKu/2myUZiup5W7xSBsiQeZjdlcOAoo9oSmqRiQrFaNTrGLR0CJQkZs0s9jbH+19bAiM9ugvs7hkhiqFO41ll48JjZmqnMy2rjlgNS+kxEVatKkGRA0Z9mN+f1IqZmqaBdyRObjlCHzLLAqnOjKfARrmflyMo9FVXywpzDc69xAwZxai/HOchd6icWIRMo13XPzath9kSPNiVbZoV866oJCFVEC065+jkDbM08TvpCnXKm0edvPkxmaNq2NAzjpvMYd/Q/qjAyQcm5Y4gWpZZZNeJUca8VMEjs9mKzQpXO6hkWHMfyljk5Ph1T0UA3+XHuYUBhW+Eqy1G1Hgu10JjWvTht0V3qPBTfhhmp0C39cU2rgyohUzzL2o0XsiztibQz6umPMsTrgtOP5HheRhlRvH6NcxAhyOeWC3CUrjwRrUFJgLPd1oq+ayNmePnD1SJ4VVuFC//XItGiltPZnCqVioRFGUJa9jQPveBS0bbzVpPZkD89Gl8swdYUCcAcOKtQg3GGpbhUvr9TQIYcL0QN4nldTxfBreMYyaV6Ni+S5Pr08BYKaLPahHPfQXG78fApO7vO0i7GS05J+mH7Vo+KmrJE7/ftMJF3ocmTvcnSGUTD2Mmc4Lqpzqe1CF3dmR6fLbtwI8W8eLMcvJ1ZQKmGqWGxeNyp4JRXgu7gwwoUkbORKCznb6/26XtCSF32TDNH9iNX5YnABsmAGfX3Plh+c19S9pWuMjBaRW5FPOn3s3CodwHbqkqUYGbv3/IzprdLFOPZbPMZbpn8LOs9zyTb/rO6Guoflrzfn0P6kXV708ZjMmEv7jK/wEVHqtLUvo9fHXh5y9vb6EqbHOda+csDfi1kGFkySF8d1EJXkyNjcDN6kercIXg028Pv2spu1dx4azeNg6+SRS8jwG9xJY7ujEygwFqPWPFDo8AcWmXGpnuZJIdR2A1aLuwA/uCjzmi34TJZc3NTHfqqVmEpNH3rg2wF7D008/W75v663j9AKq3rFjGPsP8jZ3DhnH5c+GcXT4QTLgLKb7OoosEwBuG9MPzyl+L6c4COiaa1WLY+T7R+IGoq3SHnLTg7luf1EyXze99Ce7nwhnqdpP+iiWet/N1OrKVXgDT1V26q09/+V4p6Jzzsf0mo8yFNoHj8N0pdvNrc8YNONlTipTdWMPu/fl1+JF9GunihW5YrYdwajJfl5C6CtlVg6n78ZJ8PLxtqQ0xxJ3md/BeSTSrh3r7NjezdZoYkm+Q9ITdiyHbbK0lFr+9n/0IvB2pQ81F3RP6vztp9Ok2NMlnyO0K8u9NGhj1iI0Ou/ZkmGmJ429txKqT0fBzadNBhAsTMmj/Oz8eJhkN85aChD2bmC+63cNoIGcEZ6i700B95CkRJaOt0TClO+VtaMzRZ/a5aLif7KsoXrJHxfy06CHz3zrhLcGyQp9UgP5nGEpXvusnrdbAkIrmMpJ/2iDZbqv97l9s3u3qqtsx3VlK6iM12bSFXqWog8FAydYW7700p9ejzzTILETpNU8PDGQeVLOunLvfyNWmrSPFtlvSV8P7nWCafrt4rt5cpgSxn/7Bkm6r11JwQZHuaGqhGfH9kyoJTepls5G+a3H+a0i6ps5nnV838FvCDlDfN1UngbrE5OTob/37WzIAPsLaz2Vdy47+1D8docc+8iRZj0eU2CRrt+Sg9WyFX+WvDgyBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCwf87/wNzDqaXhLF/ZgAAAABJRU5ErkJggg==" alt="swan">
+          </div>
+          <div class="header-reserve">
+          <a>Reservations</a>
+          <span>Oui.</span>
+        </div>
+        </div>
+      </div>
+    </header>
+    <section id="top-img">
+      <div class="container">
+        <div class="img-container">
+            <img src="https://leswan.ca/public/assets/images/masthead.png" alt="display-pic">
+        </div>
+      </div>
+    </section>
+    <section id='about-us'>
+      <div class="container">
+        <div class="content-container">
+        <div class="text-section">
+          <div class="title">
+            <h2>Wait.</h2>
+            <h5>a french diner?</h5>
+          </div>
+          <div class="paragraph">
+            <p>When we heard the space was available and the landlord was interested in having us as tenants, it was decided somewhere between the end of bottle one and the middle of bottle two that it would be a French Diner, and as soon as we put 'French' and Diner' together, the menu basically wrote itself. There is a strong connective line between bistro classics and diner standards: comfort food. It was easy to see how happily beef (cheek) bourguignon would share menu space with meatloaf and mashed potatoes, or how natural it seemed to have a choice between steak frites and chicken fried steak. It all comes together in a beautifully lit room that calls back to an old school diner from a bistro’s landline, all pushed through a smudgy, deco lens. Our main goal is simple, we just want you to have a nice time.</p>
+          </div>
+        </div>
+        <div class="hour-section">
+          <div class="border">
+            <ul class="items">
+              <li>
+                <div class="hours">
+                  <h5 class="headerbox-title">heures</h5>
+                  <h5 class="subtitle-box">SUNDAY to WEDNESDAY </br> 1pm -9pm</h5>
+                  <h5 class="subtitle-box">THURSDAY to SATURDAY </br> 1pm -10pm</h5>
+                </div>
+            </li>
+            <li>
+            <div class="email">
+              <h5 class="headerbox-title">appel</h5>
+              <h5 class="subtitle-box">780-440-9021</h5>
+              <a><a href="mailto:emmanueltolani17@gmail.com">info@leswan.ca</a>
+            </div>
+          </li>
+          <li>
+            <div class="social">
+              <h5 class="headerbox-title">instagram</h5>
+              <h5 class="subtitle-box">@leswanfrenchdiner</h5>
+            </div>
+          </li>
+          </ul>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <section id="menu-section">
+      <div class="container">
+        <div class="menu-header">
+          <div class="menu-title">
+            <h1>Menu</h1>
+          </div>
+        </div>
+        <div class="main-menu-container">
+          <div class="menu-submenu">
+            <h2 class="submenu-left">French</h2>
+            <h2 class="submenu-right">Diner</h2>
+          </div>
+        <ul class="main-menu-list">
+          <div class="col-1">
+            <li>
+              <span class="item-name">Tuna Melt</span>
+              <span class="item-price">15</span>
+            </li>
+            <li>
+              <span class="item-name">Salade Nicoise</span>
+              <span class="item-price">17</span>
+            </li>
+            <li>
+              <span class="item-name">French Onion Soup</span>
+              <span class="item-price">12</span>
+            </li>
+            <li>
+              <span class="item-name">Grilled cheese</span>
+              <span class="item-price">12</span>
+            </li>
+            <li>
+              <span class="item-name">meatloaf and mash</span>
+              <span class="item-price">18</span>
+            </li>
+            <li>
+              <span class="item-name">hot chicken sandwich</span>
+              <span class="item-price">14</span>
+            </li>
+            <li>
+              <span class="item-name">green beans</span>
+              <span class="item-price">7</span>
+            </li>
+            <li class="hidden">
+              <span class="item-name">cobb salad</span>
+              <span class="item-price">18</span>
+            </li>
+            <li class="hidden">
+              <span class="item-name">beef bourguignon</span>
+              <span class="item-price">26</span>
+            </li>
+            <li class="hidden">
+              <span class="item-name">1/4 rotisserie chicken</span>
+              <span class="item-price">24</span>
+            </li>
+            <li class="hidden">
+              <span class="item-name">french fries</span>
+              <span class="item-price">8</span>
+            </li>
+          </div>
+          <div class="col-2">
+            <li>
+
+            </li>
+            <li>
+              <span class="item-price">18</span>
+              <span class="item-name">cobb salad</span>
+            </li>
+            <li></li>
+            <li>
+              <span class="item-price">26</span>
+              <span class="item-name">beef bourguignon</span>
+            </li>
+            <li>
+              <span class="item-price">24</span>
+              <span class="item-name">1/4 rotisserie chicken</span>
+            </li>
+            <li>
+              <span class="item-price">8</span>
+              <span class="item-name">french fries</span>
+            </li>
+            <li></li>
+          </div>
+        </ul>
+      </div>
+        <div class="main-dessert-container">
+          <div class="menu-submenu">
+            <h2 class="submenu-left">Dessert</h2>
+            </div>
+            <ul>
+              <div class="col-1">
+                <li class="dessert-item">
+                  <span class="item-price">2 for 7$</span>
+                  <span class="item-name">Perfect chocolate chip cookie</span>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="menu-footer">
+            <div class="menu-footer-container">
+              <div class="mfooter-col1">
+                <div class="border-container">
+                  <div class="info-box">
+                    <h2>Fondue!</h2>
+                    <h5 class="time">5pm - 11pm</h5>
+                  </div>
+              </div>
+              </div>
+              <div class="mfooter-col2">
+                <div class="milkshake-box">
+                <h2>Milkshakes</h2>
+                <h5>~currently unavailable~</h5>
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    <section id="wine-section">
+      <div class="container">
+        <div class="menu-header">
+          <div class="menu-title">
+            <h1>Wine</h1>
+          </div>
+        </div>
+        <div class="wine-menu-container">
+          <div class="white-container">
+            <div class="header-title">
+              <h2>White</h2>
+            </div>
+            <div class="white-menu-container">
+              <ul>
+                <li>
+                  <span class="item-name">
+                    Domaine Bott-Geyl '17 'Métiss'
+                    <span>ALSACE, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    46
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Domaine Bott-Geyl '17 'Métiss'
+                    <span>ALSACE, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    46
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Trois Châteaux '18 Chardonnay
+                    <span>SOUTHERN FRA</span>
+                  </span>
+                  <span class="item-price">
+                    34
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Miquel '17 Albarino
+                    <span>AUBE, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    36
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Henri Prudhon & Fils '17 Aligoté
+                    <span>BURGUNDY, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    55
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Domaine de la Bretonnière '18 Sauvignon Blanc
+                    <span>LOIRE, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    42
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Vincent Carême '17 Vouvray
+                    <span>LOIRE, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    68
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    DChristian Binner '17 'L'Edel...'
+                    <span>ALSACE, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    64
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    A&A Durrmann '18 'Zegwur'
+                    <span>ALSACE, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    64
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Domain Botard Langelier '18 Polaris
+                    <span>LOIRE, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    42
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Sclåvus '17 'Vino di Sasso, Robola
+                    <span>CEPHALONIA, GRC</span>
+                  </span>
+                  <span class="item-price">
+                    60
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Mikulski '16 Bourgogne
+                    <span>BURGUNDY, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    74
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Maison En Belles Lies '17 Santenay
+                    <span>BURGUNDY, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    132
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Domaine Rolet ‘15 L’Etoile
+                    <span>JURA, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    70
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Pearl-Morissette '16 'Métis Blanc' Chardonnay
+                    <span>NIAGARA, CAN</span>
+                  </span>
+                  <span class="item-price">
+                    58
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="red-container">
+            <div class="header-title">
+              <h2>Red</h2>
+            </div>
+            <div class="red-menu-container">
+              <ul>
+                <li>
+                  <span class="item-name">
+                    Domaine Marchesseau '18 Bourgeuil, 'Poids Plume'
+                    <span>LOIRE, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    46
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Hidden Bench '17 'Bistro' Pinot Noir
+                    <span>BEAMSVILLE, CAN</span>
+                  </span>
+                  <span class="item-price">
+                    44
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Les Carabènes '18 Pinot Noir
+                    <span>PAYS D'OC</span>
+                  </span>
+                  <span class="item-price">
+                    34
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Jean-Louis Dutraive '18 Brouilly
+                    <span>BEAUJOLAIS, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    104
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    David Duband '17 Pinot Noir
+                    <span>BOURGOGNE, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    47
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Ediciones I-Limitadas '17 'Luno'
+                    <span>MONTSANT, SPA</span>
+                  </span>
+                  <span class="item-price">
+                    54
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Jeff Carrel & Olivier Cazenave '16 'La Veille des Landes'
+                    <span>BORDEAUX, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    78
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Chateau de Lamarque '83
+                    <span>HAUT-MÉDOC, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    148
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Domaine du Séminaire '19
+                    <span>CÔTES DU RHÔNE</span>
+                  </span>
+                  <span class="item-price">
+                    32
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Mas Karolina '17
+                    <span>CÔTES DU ROUSSILLON, FRA
+                    </span>
+                  </span>
+                  <span class="item-price">
+                    64
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Frédéric Brouca '17 'Champs Pentus'
+                    <span>FAUGÈRES, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    54
+                  </span>
+                </li>
+
+              </ul>
+            </div>
+
+            </div>
+          <div class="rose-container">
+            <div class="header-title">
+              <h2>Rose</h2>
+            </div>
+            <div class="rose-menu-container">
+              <ul>
+                <li>
+                  <span class="item-name">
+                    Le Swan '18 Pinot Noir
+                    <span>NIAGARA, CAN</span>
+                  </span>
+                  <span class="item-price">
+                    44
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Frédéric Brouca '18 'De Facto'
+                    <span>FAUGÈRES, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    53
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="orange-container">
+            <div class="header-title">
+              <h2>Orange</h2>
+            </div>
+            <div class="orange-menu-container">
+              <ul>
+                <li>
+                  <span class="item-name">
+                    Grey Gardens '18 Pinot Gris
+                    <span>NIAGARA, CAN</span>
+                  </span>
+                  <span class="item-price">
+                    44
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Brand '18 Fleurs Macération
+                    <span>ALSACE, FRA</span>
+                  </span>
+                  <span class="item-price">
+                    66
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Koerner '20 "Pigato" Vermentino
+                    <span>CLARE VALLEY, AUS</span>
+                  </span>
+                  <span class="item-price">
+                    48
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="swan-img">
+            <img src="https://leswan.ca/public/assets/images/swan.png" alt="">
+          </div>
+          <div class="bubbles-container">
+            <div class="header-title">
+              <h2>Bubbles</h2>
+            </div>
+            <div class="bubble-menu-container">
+              <ul>
+                <li>
+                  <span class="item-name">
+                    Henri de Belrive Crémant de Loire
+                    <span>FRA</span>
+                  </span>
+                  <span class="item-price">
+                    50
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Rosehall Run 'Ceremony'
+                    <span>PEC</span>
+                  </span>
+                  <span class="item-price">
+                    60
+                  </span>
+                </li>
+                <li>
+                  <span class="item-name">
+                    Tarlant Brut Réserve Champagne
+                    <span>FRA</span>
+                  </span>
+                  <span class="item-price">
+                    76
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="people">
+      <div class="container">
+        <div class="menu-header">
+          <div class="menu-title">
+            <h1>People</h1>
+          </div>
+        </div>
+        <div class="people-container">
+          <div class=person1>
+            <div class="photo">
+              <img src="https://leswan.ca/public/assets/images/jen.png" alt="">
+            </div>
+            <div class="person-text">
+              <div class="person-title">
+                <h1>Jen Agg</h1>
+                <h3>Partner & Vibe</h3>
+              </div>
+              <p>Yes, "vibe" is making me roll my eyes too, but I just couldn't think of a more appropriate word for what I do. I like building restaurants, a LOT, and get incredible joy in taking a project from inception to 'doors open'. Also, I wrote a book 'I Hear She's a Real Woman'. But it's most important to note that I am, above all, much more fun than at first I might appear. I like wine. No, I love wine.</p>
+            </div>
+          </div>
+          <div class=person2>
+            <div class="photo">
+              <img src="https://leswan.ca/public/assets/images/jake.png" alt="">
+            </div>
+            <div class="person-text">
+              <div class="person-title">
+                <h1>Jake Skakun</h1>
+                <h3>PARTNER & SOMMELIER</h3>
+              </div>
+              <p> When young Jake was working at a Vancouver area Milestones, he rose through the company quickly (THEY KNEW WHAT THEY HAD) and was poised to be on the fast track to management until one day in front of his coworkers, his GM asked him which was fuller-bodied, a cab or a shiraz. Jake faltered, because he didn't really know (turns out his boss didn’t know what he was talking about either), and from that moment, he vowed to learn everything he could about wine. He quit Milestones to manage at Salt Tasting Room, and later spent a year studying and bouncing around San Francisco restaurants, doing stages and picking up whatever knowledge he could. Eventually he landed at Vancouver's much lauded L'Abattoir, and worked while he continued his somm studies and found time to write a blog about all things wine--he had really fallen in love. The minute I heard he was in Toronto to stay I offered him a job and have often cited it as the best business decision I've ever made. His main focus is still on Grey Gardens, but find him here at Swan, shucking oysters and popping bottles one night a week. </p>
+          </div>
+        </div>
+          <div class=person3>
+            <div class="photo">
+              <img src="https://leswan.ca/public/assets/images/david.png" alt="">
+            </div>
+            <div class="person-text">
+              <div class="person-title">
+              <h1>David Greig</h1>
+              <h3>PARTNER & MANAGER</h3>
+            </div>
+              <p> After first pulling pints for ex-football hooligans in a North London pub 15 years ago, David started cutting his cocktail teeth in Brighton. A few years later he returned to London to continue training in a city where the standard is world-class (including the bar at All Star Lanes Brick Lane, where post-shift beers were supplemented with a game of bowling, a work perk he is still hoping to re-introduce to his life at some point). By the time he ended up here (via Vancouver where he and Jake began their beautiful bromance at L'Abattoir ) his skills as a bartender were incredibly polished. His curiosity is endless and he knows more about spirits and how to lift them into sums greater than their parts than anyone I've ever met. Without him, Cocktail Bar would not be the vibrant training ground it is, he is truly an inspiring leader, whose infectious enthusiasm is mirrored by his proteges. And now as the FOH point person for Swan he continues to blow minds with his innovative drinks, and charming service. </p>
+          </div>
+          </div>
+          <div class=person4>
+            <div class="photo">
+              <img src="https://leswan.ca/public/assets/images/james.png" alt="">
+            </div>
+            <div class="person-text">
+              <div class="person-title">
+                <h1>James Santon</h1>
+                <h3>PARTNER & CHEF</h3>
+              </div>
+              <p>James worked at Raw Bar (RIP). Back then he was a much younger cook with maybe a teeny, tiny, little chip on his shoulder (or maybe he just didn’t like me...GET IN LINE BUDDY) anyway I’m almost done making his bio about me. He says he remembers me telling him, very directly, as he occasionally moved with a slight dragging of feet to “walk with purpose”. And that it stuck with him. He went off to be a sous chef, then CDC of Enoteca Sociale where Roland and I often enjoyed his very delicious Italian cooking. Years had passed since Raw Bar and we were very congenial—one time, at the coffee shop, I even stopped a dog thief (can you IMAGINE) from making off with his beautiful boxador—I’m told this is a real, recognized breed—Riley. Shit. I’m still making it about me. James is a brilliant cook, he has this magical ability to make food (that he's not necessarily super familiar with) purely from instinct and NAILS IT. Every time. It’s frankly unsettling. He’s also a lovely and hilarious dude who runs his kitchen with the kind of leadership I hope to someday see in all restaurants. </p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

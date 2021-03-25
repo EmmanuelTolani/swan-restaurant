@@ -1,0 +1,93 @@
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import "reset";
+@import "variables";
+@import "header";
+@import "topSection";
+@import "aboutUs";
+@import "menuSection";
+@import "peopleSection";
+@import "wineSection";
+@import url(//db.onlinewebfonts.com/c/547fcb026eb30833b9696544bec8e2ac?family=Baskerville+Display+PT+Web);
+@import url(//db.onlinewebfonts.com/c/789f9065baf48309d73fd0ff02fe4aec?family=Big+Caslon+Black);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+body{
+  font-family: "Baskerville Display PT Web";
+line-height: 24px;
+.container{
+    margin: 0 auto;
+  // max-width: 1380px;
+  }
+}
+
+#notify-bar{
+  position: absolute;
+  padding: 20px;
+  background: #0A6AA6;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  opacity: 80%;
+  z-index: 100;
+  span{
+    padding: 0 10px;
+    font-size: 18px;
+    color: white;
+    a{
+      color: white;
+    }
+  }
+}
+
+.menu-header{
+  h1 {
+        font-family: sans-serif;
+        margin: 100px auto;
+        text-align: center;
+        color: black;
+        font-size: 40px;
+        max-width: 600px;
+        position: relative;
+        padding: 0 50px;
+      }
+      h1:before {
+        content: "";
+        display: block;
+        width: 120px;
+        height: 85px;
+        background: url("../img/swirl-left.jpg") no-repeat;
+        background-size: contain;
+        left: -50%;
+        top: -50%;
+        position: absolute;
+      }
+      h1:after {
+        content: "";
+        display: block;
+        width: 120px;
+        height: 60px;
+        background: url("../img/swirl-right.jpg") no-repeat ;
+        background-size: contain;
+        right: -50%;
+        top: -50%;
+        position: absolute;
+      }
+}
+
+
+@media screen and (min-width:768px) and (max-width: 1024px) {
+
+}
+@media screen and (min-width : 320px) and (max-width : 767px) {
+  .menu-header{
+    h1:before{
+      width: 110px;
+      left: -10%;
+    }
+    h1:after{
+      width: 110px;
+      right: -10%;
+    }
+  }
+
+}
